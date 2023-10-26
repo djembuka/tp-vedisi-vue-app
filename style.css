@@ -1,0 +1,38 @@
+/*Copyright*/
+a.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  margin: 100px auto 50px;
+  flex: 0 0 auto;
+}
+a.copyright:hover {
+  text-decoration: none;
+}
+.copyright img {
+  width: 100px;
+  margin-right: 23px;
+}
+.copyright span {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  color: #495668;
+}
+/*Statistics*/
+.header-statistics {
+  display: none;
+}
+.header-statistics.header-statistics--visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-statistics__num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 13px;
+}
+.header-statistics__text {
+  font-size: 0.7rem;
+}
