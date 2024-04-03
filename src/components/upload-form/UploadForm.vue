@@ -5,6 +5,9 @@
       <div class="terms-link">
         <a href="/terms/"> <i></i> Условия использования</a>
       </div>
+      <upload-form-error
+        v-if="$store.state.uploadForm.error"
+      ></upload-form-error>
       <form action="" method="POST">
         <upload-form-control></upload-form-control>
       </form>
@@ -23,6 +26,7 @@
 <script>
 import UploadFormH1 from './UploadFormH1.vue';
 import UploadFormControl from './UploadFormControl.vue';
+import UploadFormError from './UploadFormError.vue';
 
 export default {
   data() {
@@ -48,6 +52,7 @@ export default {
   components: {
     UploadFormH1,
     UploadFormControl,
+    UploadFormError,
   },
 };
 </script>
