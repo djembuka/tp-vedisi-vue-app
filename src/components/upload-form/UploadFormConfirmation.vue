@@ -116,10 +116,12 @@ export default {
         if (!this.$store.state.uploadForm.controllerAborted) {
           this.$store.commit('changeUploadError', 'Произошла ошибка.');
         }
-        this.$store.commit('setUploadFormProp', {
-          prop: 'controllerAborted',
-          value: false,
+        this.$store.commit("changeUploadStatus", "form");
+        this.$store.commit("setUploadFormProp", {
+          prop: "controllerAborted",
+          value: false
         });
+
         return;
       }
 
@@ -136,6 +138,7 @@ export default {
           this.$store.commit('changeUploadError', 'Произошла ошибка.');
         }
 
+        this.$store.commit("changeUploadStatus", "form");
         this.$store.commit('setUploadFormProp', {
           prop: 'controllerAborted',
           value: false,
@@ -166,6 +169,7 @@ export default {
             this.$store.commit('changeUploadError', 'Произошла ошибка.');
           }
 
+          this.$store.commit("changeUploadStatus", "form");
           this.$store.commit('setUploadFormProp', {
             prop: 'controllerAborted',
             value: false,
@@ -180,9 +184,10 @@ export default {
             this.$store.commit('changeUploadError', 'Произошла ошибка.');
           }
 
-          this.$store.commit('setUploadFormProp', {
-            prop: 'controllerAborted',
-            value: false,
+          this.$store.commit("changeUploadStatus", "form");
+          this.$store.commit("setUploadFormProp", {
+            prop: "controllerAborted",
+            value: false
           });
           return;
         } else {
