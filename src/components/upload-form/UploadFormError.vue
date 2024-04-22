@@ -59,18 +59,18 @@
 export default {
   data() {
     return {
-      show: false
+      show: false,
     };
   },
   methods: {
     click() {
       this.show = false;
-      this.$store.commit("changeUploadError", "");
-    }
+      this.$store.commit('changeUploadError', '');
+    },
   },
   mounted() {
     this.show = true;
-  }
+  },
 };
 </script>
 
@@ -91,13 +91,16 @@ export default {
   opacity: 1;
 }
 .upload-error .container {
+  margin: 0 auto !important;
   align-items: center;
   flex-direction: initial;
+  min-height: 100vh;
+  display: flex;
 }
 .upload-error__content {
   color: #fff;
   font-size: 14px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   line-height: 21px;
   border-radius: 20px;
   padding: 32px 32px 34px;
@@ -118,10 +121,10 @@ export default {
 .upload-error__content svg {
   width: 32px;
   flex-shrink: 0;
-  margin: 3px 32px 0 0;
+  margin: 3px 32px 0 0 !important;
 }
 .upload-error__text {
-  margin-bottom: 28px;
+  margin-bottom: 28px !important;
 }
 .upload-error .button {
   min-width: 185px;
